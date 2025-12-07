@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ગુજરાતી TRADER – Premium Trading Page</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '851780920881209');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=851780920881209&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google Gujarati Font -->
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Noto+Sans+Gujarati:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #000, #1a0000, #2a0000);
+    background-size: 400% 400%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    animation: bgMove 12s ease infinite;
+}
+
+/* Background animation */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid red;
+    border-top: 6px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.gold {
+    background: linear-gradient(90deg, #ffd700, #ffbb00, #ff9d00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Neon Logo */
+.logo {
+    width: 160px;
+    border-radius: 50%;
+    animation: glow 3s infinite ease-in-out, float 5s infinite ease-in-out;
+}
+@keyframes glow {
+    0% { filter: drop-shadow(0 0 12px red); }
+    50% { filter: drop-shadow(0 0 28px red); }
+    100% { filter: drop-shadow(0 0 12px red); }
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* Title */
+.title {
+    font-size: 48px;
+    margin-top: 20px;
+    font-family: 'Shrikhand', cursive;
+}
+.subtitle {
+    margin-top: 10px;
+    color: #ddd;
+    font-size: 20px;
+}
+
+/* Neon Gradient Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    margin-top: 25px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #ff0000, #ff4d4d, #ff0000);
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 0 18px red;
+    transition: 0.25s;
+}
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px red;
+}
+
+/* Sections */
+.section {
+    width: 90%;
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    animation: fadeIn 1.2s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px 0;
+}
+.stats div {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Floating Telegram Button */
+.floating-btn {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background: #0088cc;
+    color: #fff;
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 18px #0088cc;
+    font-size: 32px;
+    z-index: 999;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    color: #aaa;
+    font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .title { font-size: 34px; }
+    .subtitle { font-size: 16px; }
+    .logo { width: 135px; }
+}
+</style>
+
+<!-- Background Music -->
+<audio autoplay loop hidden>
+<source src="https://files.catbox.moe/0r6k7c.mp3" type="audio/mpeg">
+</audio>
+
+</head>
+<body>
+
+<!-- Preloader -->
+<div id="preloader"><div class="loader"></div></div>
+<script>
+window.onload = function() {
+    document.getElementById("preloader").style.display = "none";
+};
+</script>
+
+<!-- Floating Telegram Button -->
+<a href="https://t.me/+4Jar6WhZHXk1MjA9" target="_blank" class="floating-btn">
+<i class="fab fa-telegram-plane"></i>
+</a>
+
+<div class="hero">
+    <img src="https://uploads.onecompiler.io/445e5df86/445tc7ue3/330.png" class="logo">
+
+    <div class="title gold">ગુજરાતી TRADER</div>
+    <div class="subtitle">India's Most Premium Gujarati Trading Community 🚀</div>
+
+    <a class="btn" target="_blank" href="https://t.me/+4Jar6WhZHXk1MjA9">
+        <i class="fab fa-telegram-plane"></i> JOIN PREMIUM TELEGRAM
+    </a>
+</div>
+
+<div class="stats section">
+    <div>🔥 50,000+ Traders</div>
+    <div>📈 95% Accuracy</div>
+    <div>🏆 5+ Years Experience</div>
+</div>
+
+<div class="section">
+    <h2 class="gold">📈 Learn Premium Stock Market Skills</h2>
+    <p>
+        ✔ Intraday & Swing Trading <br>
+        ✔ BankNifty / Nifty Levels <br>
+        ✔ Option Buying & Selling <br>
+        ✔ Price Action Mastery <br>
+        ✔ Chart Patterns <br>
+        ✔ Pro Trading Psychology  
+    </p>
+</div>
+
+<div class="section">
+    <h2 class="gold">🔥 Why Join ગુજરાતી TRADER?</h2>
+    <p>
+        ✔ 90–95% Accuracy Levels <br>
+        ✔ Free Daily Calls <br>
+        ✔ Live Market Mindset Coaching <br>
+        ✔ Beginner to Pro Training <br>
+        ✔ Trusted by 50,000+ Traders  
+    </p>
+</div>
+
+<div style="text-align:center;">
+    <a class="btn" target="_blank" href="https://t.me/+4Jar6WhZHXk1MjA9">
+        <i class="fab fa-telegram-plane"></i> JOIN NOW – 100% FREE
+    </a>
+</div>
+
+<div class="footer">
+    © 2025 ગુજરાતી TRADER — All Rights Reserved  
+    <br> Premium Trading Community • Made in Gujarat 🇮🇳
+</div>
+
+</body>
+</html>
